@@ -308,8 +308,6 @@ see [the skimage documentation for details](https://scikit-image.org/docs/dev/ap
 It returns a grayscale image with floating point values in the range from 0 to 1.
 We can use the function `skimage.util.img_as_ubyte()` in order to convert it back to the
 original data type and the data range back 0 to 255.
-Note that it is often better to use image values represented by floating point values,
-because using floating point numbers is numerically more stable.
 
 > ## Colour and `color`
 >
@@ -372,6 +370,7 @@ pass `plugin="pillow"`. If the backend is not specified explicitly, `iio.imread(
 
 > ## Loading images with `imageio`: Pixel type and depth
 > When loading an image with `mode="L"`, the pixel values are stored as 8-bit integer numbers that can take values in the range 0-255. However, pixel values may also be stored with other types and ranges. For example, some `skimage` functions return the pixel values as floating point numbers in the range 0-1. The type and range of the pixel values are important for the colorscale when plotting, and for masking and thresholding images as we will see later in the lesson. If you are unsure about the type of the pixel values, you can inspect it with `print(image.dtype)`. For the example above, you should find that it is `dtype('uint8')` indicating 8-bit integer numbers.
+> Note that it is often better to use image values represented by floating point values, because using floating point numbers is numerically more stable.
 {: .callout}
 
 > ## Keeping only low intensity pixels (10 min)
