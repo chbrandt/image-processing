@@ -87,7 +87,7 @@ the 256 possible values in the grayscale image.
 
 The parameter `range` is the range of values each of the pixels in the image can have.
 Here, we pass 0 and 1,
-which is the value range of our input image after transforming it to grayscale.
+which is the value range of our input image after transforming it to float.
 
 The first output of the `np.histogram` function is a one-dimensional NumPy array,
 with 256 rows and one column,
@@ -95,7 +95,7 @@ representing the number of pixels with the intensity value corresponding to the 
 I.e., the first number in the array is
 the number of pixels found with intensity value 0,
 and the final number in the array is
-the number of pixels found with intensity value 255.
+the number of pixels found with maximum intensity.
 The second output of `np.histogram` is
 an array with the bin edges and one column and 257 rows
 (one more than the histogram itself).
